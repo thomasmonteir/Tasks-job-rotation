@@ -1,34 +1,25 @@
-#include <stdio.h>
+#include <iostream>
 
-int main(void){
+using namespace std;
 
-    int a1 = 1, a2 = 0, n, quant, add;
+int main() {
+    int num;
+    int first = 0, second = 1, next;
 
-    scanf("%d",&n);
+    cout << "Digite um número: ";
+    cin >> num;
 
-    for(quant = 1; quant <= n; quant++){
-
-        add = a1 + a2;
-
-        a1 = a2;
-
-        a2 = add;
-
-        if(quant != n){
-
-            printf("%d ",add);
-
-        }else{
-
-            printf("%d\n",add);
-
-        }
-
-
+    while (next < num) {
+        next = first + second;
+        first = second;
+        second = next;
     }
 
-
+    if (next == num) {
+        cout << num << " Pertence à sequência de Fibonacci." << endl;
+    } else {
+        cout << num << " Nao pertence à sequência de Fibonacci." << endl;
+    }
 
     return 0;
-
 }
