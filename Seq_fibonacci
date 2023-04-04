@@ -8,13 +8,14 @@ int main() {
 
     cout << "Digite um número: ";
     cin >> num;
-
+    
+    //Enquanto o próximo número for menor que o digitado ele vai fazer as operações
     while (next < num) {
         next = first + second;
         first = second;
         second = next;
     }
-
+    //verificação se pertence ou não
     if (next == num) {
         cout << num << " Pertence à sequência de Fibonacci." << endl;
     } else {
